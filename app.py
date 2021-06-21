@@ -60,14 +60,6 @@ def deploy_pko_troops(df_input):
             fig = plt.plot(month_array, brds)
             return months
         
-#        if i >= max(num_months) and starting_brds > 0:
-#            print("\nBy deploying", str(troop_rate), "troops a month",
-#                  "\nuntil a total of", str(total_troops),
-#                  "troops are deployed, \nbattle-related deaths never hit 0", 
-#                  str(months), "months")
-#            plt.plot(month_array, brds, label='BRDs')
-#            decorate_plot()
-#            return
 def deploy_pko_troops_plot(df_input):
     starting_brds = int(df_input['starting_brds'])
     troop_rate = int(df_input['troop_rate'])
@@ -75,7 +67,6 @@ def deploy_pko_troops_plot(df_input):
     num_months = int(df_input['num_months'])
     brds = []
     months = 0
-    #month_array = np.array([])
     month_array = []
     for i in range(num_months):
         num_troops = i * troop_rate
